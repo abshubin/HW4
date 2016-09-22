@@ -1,5 +1,7 @@
 /**
  * Created by Andrew Shubin on 9/21/16.
+ * Garage.java is merely a test runner,
+ * and not part of the assignment.
  */
 public class Garage {
     public static void main(String[] args) {
