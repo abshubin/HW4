@@ -11,9 +11,9 @@ public class Garage {
     public Garage() {
         Inventory inv = new Inventory();
 
-        Vehicle v1 = new Truck("Ford", 1995, false, 1200, 13, false, 0.5);
-        Vehicle v2 = new Car("Toyota", 1999, true, 200, 28, false);
-        Vehicle v3 = new Truck("Ram", 2000, true, 5800, 10, true, 10);
+        Vehicle v1 = new Truck("Ford Explorer", 1995, false, 1200, 13, false, 0.5);
+        Vehicle v2 = new Car("Toyota Camry", 1999, true, 200, 28, false);
+        Vehicle v3 = new Truck("Ford F-150", 2000, true, 5800, 10, true, 10);
 
         inv.add(v1);
         inv.add(v2);
