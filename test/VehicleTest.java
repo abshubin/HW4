@@ -97,7 +97,7 @@ public class VehicleTest {
         double newMPG = mpg * 2;
 
         // Act
-        v.setPrice(newMPG);
+        v.setMPG(newMPG);
 
         // Assert
         assertEquals("ERROR in Vehicle.setMPG()", newMPG, v.getMPG(), 0);
@@ -111,7 +111,7 @@ public class VehicleTest {
         Vehicle v = new Vehicle(make, model, drive, price, mpg);
         String expected = model + " " + make + "\n"
                 + (drive ? "4WD" : "2WD") + "\n$"
-                + price + "\n" + mpg + "MPG";
+                + price + "\n" + mpg + "MPG\n";
 
         // Act
         v.printVehicle();

@@ -34,6 +34,6 @@ public class Truck extends Vehicle {
         super.printVehicle();
         String condition = (sideStep ? "" : "No ");
         System.out.println(condition + "Side Step");
-        System.out.println("Tow up to " + towCap + "tons");
+        System.out.println("Tow up to " + towCap + " ton(s)");
     }
 }
