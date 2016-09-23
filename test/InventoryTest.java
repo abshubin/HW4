@@ -97,4 +97,19 @@ public class InventoryTest {
         assertEquals("ERROR in Inventory.printAveragePriceOfAllVehicles()", expected, out.toString());
     }
 
+    @Test
+    public void testEmptyInventoryHandling() throws Exception {
+        // Arrange
+        Inventory inv = new Inventory();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+        String expected = "Inventory is empty...\n";
+
+        // Act
+        inv.remove(new Vehicle(make, model, drive, price, mpg));
+
+        // Assert
+        assertEquals("ERROR in Empty Inventory Handling", expected, out.toString());
+    }
+
 }

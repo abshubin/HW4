@@ -17,10 +17,15 @@ public class Inventory {
     }
 
     public void remove(Vehicle v) {
-        inv.remove(v);
+        if (!isEmpty()) {
+            inv.remove(v);
+        }
     }
 
     public Vehicle findCheapestVehicle() {
+        if (isEmpty()) {
+            return null;
+        }
         Vehicle cheapest = inv.get(0);
         for (Vehicle v : inv) {
             if ( v.getPrice() < cheapest.getPrice() ) {
@@ -31,6 +36,9 @@ public class Inventory {
     }
 
     public Vehicle findMostExpensiveVehicle() {
+        if (isEmpty()) {
+            return null;
+        }
         Vehicle mostExp = new Vehicle(null, 0, false, 0, 0);
         for (Vehicle v : inv) {
             if ( v.getPrice() > mostExp.getPrice() ) {
@@ -41,13 +49,23 @@ public class Inventory {
     }
 
     public void printAveragePriceOfAllVehicles() {
-        double sum = 0;
-        int n = 0;
-        for (Vehicle v : inv) {
-            sum += v.getPrice();
-            n++;
+        if (!isEmpty()) {
+            double sum = 0;
+            int n = 0;
+            for (Vehicle v : inv) {
+                sum += v.getPrice();
+                n++;
+            }
+            String ave = new DecimalFormat("#.##").format(sum / (double) n);
+            System.out.print("$" + ave);
         }
-        String ave = new DecimalFormat("#.##").format(sum / (double) n);
-        System.out.print( "$" + ave );
+    }
+
+    private boolean isEmpty() {
+        boolean empty = inv.isEmpty();
+        if (empty) {
+            System.out.println("Inventory is empty...");
+        }
+        return empty;
     }
 }
