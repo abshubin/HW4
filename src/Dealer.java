@@ -66,7 +66,7 @@ public class Dealer implements Serializable {
     public void serialize(String fileName) {
 
         File file = FileUtils.getFile(fileName);
-        byte[] data = SerializationUtils.serialize(inv);
+        byte[] data = SerializationUtils.serialize(this);
         try {
             FileUtils.writeByteArrayToFile(file, data);
         } catch(IOException e) {
