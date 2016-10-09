@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-lang3-3-src">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/ApacheCommons/commons-lang3-3.4-src/src/main/java" />
+      <root url="file://$USER_HOME$/ApacheCommons/commons-lang3-3.4-src/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

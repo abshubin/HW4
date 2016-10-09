@@ -1,6 +1,7 @@
 /**
  * Created by Andrew Shubin on 9/21/16.
  */
+
 public class Truck extends Vehicle {
     private boolean sideStep;
     private double towCap;

@@ -2,10 +2,11 @@
  * Created by Andrew Shubin on 9/21/16.
  */
 
+import java.io.Serializable;
 import java.util.*;
 import java.text.*;
 
-public class Inventory {
+public class Inventory implements Serializable {
     private List<Vehicle> inv;
 
     public Inventory() {

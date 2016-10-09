@@ -1,7 +1,10 @@
 /**
  * Created by Andrew Shubin on 9/21/16.
  */
-public class Vehicle {
+
+import java.io.Serializable;
+
+public class Vehicle implements Serializable {
     private String make;
     private int model;
     private boolean fourWD;
